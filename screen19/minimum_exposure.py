@@ -41,22 +41,21 @@ import logging
 import time
 from typing import Iterable, List, Optional, Sequence, Union
 
-import numpy as np
-from scipy.optimize import curve_fit
-from six.moves import cStringIO as StringIO
-from tabulate import tabulate
-
 import boost.python
 import iotbx.phil
 from cctbx import miller
 from libtbx.phil import scope, scope_extract
 
+import numpy as np
 from dials.array_family import flex
 from dials.util import log
 from dials.util.options import OptionParser
 from dials.util.version import dials_version
 from dxtbx.model import Experiment, ExperimentList
+from scipy.optimize import curve_fit
 from screen19 import __version__, d_ticks, plot_intensities, terminal_size
+from six.moves import cStringIO as StringIO
+from tabulate import tabulate
 
 # Custom types
 FloatSequence = Sequence[float]
