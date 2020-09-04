@@ -55,9 +55,6 @@ import timeit
 from glob import glob
 from typing import Dict, List, Optional, Sequence, Tuple
 
-import procrunner
-from six.moves.cPickle import PickleError
-
 import iotbx.phil
 from libtbx import Auto
 from libtbx.introspection import number_of_processors
@@ -65,6 +62,7 @@ from libtbx.phil import scope
 
 import dials.command_line.integrate
 import dials.util.version
+import procrunner
 import screen19
 from dials.algorithms.indexing import DialsIndexError
 from dials.algorithms.indexing.bravais_settings import (
@@ -92,6 +90,7 @@ from dxtbx.model.experiment_list import (
     GoniometerComparison,
 )
 from screen19.minimum_exposure import suggest_minimum_exposure
+from six.moves.cPickle import PickleError
 
 Templates = List[Tuple[str, Tuple[int, int]]]
 
